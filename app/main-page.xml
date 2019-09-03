@@ -1,0 +1,60 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo = "navigatingTo" class="page" >
+
+    <Page.actionBar>
+        <ActionBar icon="" class="action-bar">
+            <android>
+                <ActionItem  text = "History" android.position = "popup" tap = "{{showHistory}}" />
+            </android>
+            <ios>
+                <ActionItem text = "History" ios.position="right" tap = "{{showHistory}}"/>
+            </ios>
+        </ActionBar>
+    </Page.actionBar>
+
+
+    <DockLayout backgroundColor = "black" stretchLastChild = "false" >
+
+       
+        <StackLayout paddingTop="50" paddingBottom ="20" paddingLeft = "20" dock = "top" height = "{{less_height}}" >
+            <Label id = "exp" text = "{{ expression }}" textAlignment = "left" fontSize = "30" class = "my-exp" textWrap = "true"/>
+        </StackLayout>
+
+        <StackLayout paddingTop="70" paddingRight = "20" dock = "top" height = "{{less_height}}" >
+            <Label id = "result" text = "{{ result }}" textAlignment = "right" fontSize = "30" class = "my-exp" />
+        </StackLayout>
+
+    
+        <GridLayout rows = "*,*,*,*,*" columns = "*,*,*,*" class = "bgcolor" paddingLeft = "10" paddingRight = "10" paddingTop = "40" dock = "bottom" height = "{{height}}" >
+
+            <Button text = "1" tap = "{{onTap1}}" row = "0" col = "0" class="btn btn-primary btn-active btn-rounded-lg"  /> 
+            <Button text = "2" tap = "{{onTap2}}" row = "0" col = "1" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "3" tap = "{{onTap3}}" row = "0" col = "2" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "+" tap = "{{onTapadd}}" row = "0" col = "3" class="btn btn-primary btn-active btn-rounded-lg" /> 
+          
+            <Button text = "4" tap = "{{onTap4}}" row = "1" col = "0" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "5" tap = "{{onTap5}}" row = "1" col = "1" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "6" tap = "{{onTap6}}" row = "1" col = "2" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "-" tap = "{{onTapsub}}" row = "1" col = "3" class="btn btn-primary btn-active btn-rounded-lg" /> 
+
+            <Button text = "7" tap = "{{onTap7}}" row = "2" col = "0" class="btn btn-primary btn-active btn-rounded-lg"  /> 
+            <Button text = "8" tap = "{{onTap8}}" row = "2" col = "1" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "9" tap = "{{onTap9}}" row = "2" col = "2" class="btn btn-primary btn-active btn-rounded-lg"  /> 
+            <Button text = "*" tap = "{{onTapmul}}" row = "2" col = "3" class="btn btn-primary btn-active btn-rounded-lg" /> 
+
+            <Button text = "CLR" tap = "{{onTapclr}}" row = "3" col = "0" class="btn btn-primary btn-active btn-rounded-lg"  textWrap = "false"/> 
+            <Button text = "0" tap = "{{onTap0}}" row = "3" col = "1" class="btn btn-primary btn-active btn-rounded-lg"  /> 
+            <Button text = "^" tap = "{{onTapexp}}" row = "3" col = "2" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = "/" tap = "{{onTapdiv}}" row = "3" col = "3" class="btn btn-primary btn-active btn-rounded-lg" /> 
+
+            <Button text = "(" tap = "{{onTaplb}}" row = "4" col = "0" class="btn btn-primary btn-active btn-rounded-lg" /> 
+            <Button text = ")" tap = "{{onTaprb}}" row = "4" col = "1" class="btn btn-primary btn-active btn-rounded-lg"  />
+            <Button text = "<-" tap = "{{onTapbck}}" row = "4" col = "2" class="btn btn-primary btn-active btn-rounded-lg"  />
+
+
+        </GridLayout>
+
+    </DockLayout>
+
+
+</Page>

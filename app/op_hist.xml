@@ -1,0 +1,13 @@
+<Page navigatingTo="navigatingTo" class = "page">
+
+    <ListView id="listView1" items="{{ items }}" >
+        <ListView.itemTemplate>
+            <StackLayout paddingTop = "20" paddingLeft = "20" paddingBottom = "20" fontSize = "30">
+                <Label id = "label1" text = "{{ timestamp }}" paddingBottom = "20" />
+                <Label id = "label2" text = "{{ expression }}" paddingBottom = "20" fontSize = "30" />
+                <Label id = "label2" text = "{{ result }}"  textAlignment = "right" paddingRight = "50" fontSize = "25"/>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+
+</Page>
